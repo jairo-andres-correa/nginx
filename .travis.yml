@@ -9,6 +9,10 @@ addons:
       - chefdk
 
 services: docker
+env:
+  global:
+    - CHEF_LICENSE="accept-no-persist"
+
 
 before_script:
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
